@@ -1,0 +1,134 @@
+@import "colors.css";
+
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "SF Pro Text", "JetBrainsMono Nerd Font", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+window#waybar {
+  background-color: transparent;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  background-color: alpha(@background, 0.85);
+  border-radius: 24px;
+  padding: 4px 12px;
+  margin-top: 4px;
+  border: 1px solid alpha(@primary, 0.1);
+}
+
+#workspaces button {
+  color: @secondary;
+  padding: 2px 10px;
+  margin: 2px 4px;
+  border-radius: 16px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+#workspaces button:hover {
+  background-color: alpha(@primary, 0.15);
+  color: @primary;
+  box-shadow: none;
+}
+
+#workspaces button.active {
+  background-color: @primary;
+  color: @on_primary;
+}
+
+#workspaces button.urgent {
+  background-color: @error;
+  color: @on_error;
+}
+
+#window {
+  color: @on_background;
+  margin: 0 10px;
+  padding: 0;
+}
+
+#clock,
+#pulseaudio,
+#battery,
+#backlight,
+#tray,
+#language,
+#keyboard-state,
+#custom-cava,
+#custom-swaync {
+  padding: 2px 10px;
+  margin: 2px 4px;
+  border-radius: 16px;
+  color: @primary;
+  transition: all 0.2s ease;
+}
+
+#clock {
+  color: @tertiary;
+}
+
+#pulseaudio {
+  color: @secondary;
+}
+
+#battery {
+  color: @primary;
+}
+
+#backlight {
+  color: @on_background;
+}
+
+#custom-cava {
+  color: @tertiary;
+}
+
+#custom-swaync {
+  color: @primary;
+}
+
+#language {
+  color: @secondary;
+  background-color: alpha(@secondary, 0.1);
+}
+
+#pulseaudio:hover,
+#backlight:hover,
+#battery:hover,
+#clock:hover,
+#custom-swaync:hover {
+  background-color: alpha(@primary, 0.1);
+}
+
+#battery.warning {
+  color: @tertiary;
+  background-color: alpha(@tertiary, 0.15);
+}
+
+#battery.critical:not(.charging) {
+  color: @error;
+  background-color: alpha(@error, 0.15);
+  animation-name: blink;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#battery.charging {
+  color: #a6e3a1;
+}
+
+@keyframes blink {
+  to {
+    background-color: @error;
+    color: @on_error;
+  }
+}

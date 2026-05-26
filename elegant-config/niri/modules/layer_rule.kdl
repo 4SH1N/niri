@@ -1,0 +1,12 @@
+// تفعيل الـ Blur والحواف الدائرية لتطبيق Rofi في جذر الإعدادات
+layer-rule {
+    match namespace="^rofi$"
+    
+    geometry-corner-radius 24
+    
+    background-effect {
+        blur true
+        xray false 
+    }
+}
+
