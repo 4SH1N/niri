@@ -1,0 +1,142 @@
+
+
+@theme "colors.rasi"
+
+configuration {
+    font:                       "Ubuntu Nerd Font Medium 16";
+
+    show-icons:                 false;
+    icon-theme:                 "Papirus";
+
+    drun-display-format:        "{name}";
+
+    disable-history:            true;
+    hide-scrollbar:             true;
+    sidebar-mode:               false;
+
+    fullscreen:                 false;
+}
+
+
+window {
+    transparency:               "real";
+
+    background-color:           rgba(20,20,20,0.65);
+    text-color:                 @on-surface;
+
+    border:                     1px solid;
+    border-radius:              28px;
+    border-color:               rgba(255,255,255,0.08);
+
+    width:                      520px;
+    location:                   center;
+    anchor:                     center;
+
+    x-offset:                   0;
+    y-offset:                   0;
+}
+
+
+mainbox {
+    background-color:           transparent;
+
+    spacing:                    24px;
+    padding:                    26px;
+
+    children:                   [ "inputbar", "listview" ];
+}
+
+
+inputbar {
+    children:                   [ "textbox-prompt-colon" ];
+
+    background-color:           rgba(255,255,255,0.07);
+
+    border:                     1px solid;
+    border-radius:              999px;
+    border-color:               rgba(255,255,255,0.06);
+
+    padding:                    16px 22px;
+
+    margin:                     0px;
+}
+
+textbox-prompt-colon {
+    expand:                     true;
+
+    str:                        "Power Menu";
+
+    text-color:                 @primary;
+
+    background-color:           transparent;
+
+    horizontal-align:           0.5;
+    vertical-align:             0.5;
+}
+
+
+listview {
+    columns:                    3;
+    lines:                      2;
+
+    dynamic:                    true;
+    cycle:                      true;
+
+    spacing:                    14px;
+
+    layout:                     vertical;
+
+    background-color:           transparent;
+}
+
+
+element {
+    orientation:                vertical;
+
+    background-color:           transparent;
+
+    border-radius:              22px;
+
+    padding:                    20px;
+
+    spacing:                    12px;
+
+    cursor:                     pointer;
+}
+
+
+element normal.normal {
+    background-color:           rgba(255,255,255,0.05);
+    text-color:                 @on-surface;
+}
+
+
+element alternate.normal {
+    background-color:           rgba(255,255,255,0.05);
+    text-color:                 @on-surface;
+}
+
+
+element selected.normal {
+    background-color:           @secondary-container;
+    text-color:                 @on-secondary-container;
+
+    border:                     1px solid;
+    border-color:               rgba(255,255,255,0.08);
+}
+
+
+element-text {
+    background-color:           transparent;
+
+    text-color:                 inherit;
+
+    font:                       "Ubuntu Nerd Font Medium 32";
+
+    horizontal-align:           0.5;
+    vertical-align:             0.5;
+}
+
+element-icon {
+    enabled:                    false;
+}
