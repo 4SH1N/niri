@@ -1,0 +1,74 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+
+{
+  "icon_theme": "Catppuccin Mocha",
+  "project_panel": {
+    "default_width": 260.0,
+    "dock": "left"
+  },
+
+  "buffer_font_weight": 500.0,
+  "buffer_font_family": "CaskaydiaCove Nerd Font Mono",
+  "ui_font_size": 16,
+  "buffer_font_size": 17.0,
+
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Tokyo Night"
+  },
+
+  "languages": {
+    "Ruby": {
+      "language_servers": [
+        "ruby-lsp",
+        "rubocop",
+        "!solargraph"
+      ]
+    },
+
+    "HTML+ERB": {
+      "language_servers": [
+        "ruby-lsp",
+        "vscode-html-language-server",
+        "emmet-language-server",
+        "tailwindcss-language-server"
+      ],
+      "show_completions_on_input": true,
+      "show_edit_predictions": true,
+      "tab_completion": "on"
+    },
+
+    "emmet": {
+      "node_path": null,
+      "show_expanded_abbreviations": "always",
+      "show_suggestions_as_snippets": true,
+      "languages": [
+        "html",
+        "html+erb",
+        "erb"
+      ]
+    },
+
+    "JS+ERB": {
+      "language_servers": [
+        "ruby-lsp",
+        "..."
+      ]
+    },
+
+    "YAML+ERB": {
+      "language_servers": [
+        "ruby-lsp"
+      ]
+    }
+  }
+}
+
